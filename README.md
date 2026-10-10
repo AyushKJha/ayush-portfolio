@@ -1,14 +1,19 @@
-# Ayush Kumar Jha � Portfolio
+<img src="docs/banner.svg" alt="Project overview" width="100%">
 
-[Open the live portfolio](https://ayush-kumar-jha.onrender.com/)
+# Interactive Portfolio
+### Ayush Kumar Jha · React edition
 
-Interactive portfolio with scroll-driven portrait chapters, X-ray hover effects, responsive project sections, CV, and certificates.
+[Open this version](https://ayush-kumar-jha.onrender.com/) · [Current portfolio](https://ayush-kumar-jha-v2.onrender.com/)
 
-[Open Daily Routine Tracker](https://daily-routine-journal.onrender.com/)
+An earlier portfolio built around scroll-driven portrait chapters, X-ray hover effects, project sections, and downloadable credentials.
 
-## Clone and run
+**React · TypeScript · Vite · CSS**
 
-Install Node.js 22.13+ (or a newer supported LTS), then:
+This repository preserves the React edition. The newer static portfolio lives in [profile-2.0](https://github.com/AyushKJha/profile-2.0).
+
+## Run locally
+
+Use Node.js 22.13+:
 
 ```sh
 git clone https://github.com/AyushKJha/ayush-portfolio.git
@@ -17,25 +22,25 @@ npm install
 npm run dev
 ```
 
-Vite opens `/source.html`, the development entry. The full editable code is directly in this repository; no ZIP extraction is needed.
+Vite opens `/source.html`, the development entry.
 
-## Source files
+## Source map
 
-- `Portfolio.tsx`: React page, content, portrait interaction, and scroll behavior.
-- `portfolio.css`: typography, responsive layouts, colors, and animations.
-- `main.tsx` and `source.html`: development entry.
-- `vite.config.ts`: React and CSS build configuration.
-- `finish-build.mjs`: prepares the final HTML and copies the public assets.
-- `package.json`: pinned direct dependencies and development/build commands.
-- The portrait atlas, CV PDF, and favicon are alongside the source.
+| File | Purpose |
+| --- | --- |
+| [Portfolio.tsx](Portfolio.tsx) | Content, portrait interaction, and scroll behavior |
+| [portfolio.css](portfolio.css) | Layout, typography, and animation |
+| [main.tsx](main.tsx) / [source.html](source.html) | Development entry |
+| [vite.config.ts](vite.config.ts) | Build configuration |
+| [finish-build.mjs](finish-build.mjs) | Output preparation and asset copying |
 
-## Production build
+## Build and publish
 
 ```sh
 npm run build
 npm run preview
 ```
 
-Publish `dist/` on a static host. The existing Render service currently publishes the previously built root `index.html` and its bundled JavaScript/CSS. Editing source does not automatically update those files. To update the hosted site, publish the new `dist/` output and manually deploy on Render, or change Render to build with `npm install && npm run build` and publish `dist`.
+Publish `dist/` on a static host. The existing Render setup serves previously built files from the repository root; changing the source alone does not refresh that bundle. To deploy source changes, publish the new `dist/` output or configure Render to build and serve it.
 
-`portfolio-source.zip` is an earlier scaffold backup; use the root source files for ongoing development. No API keys are required for this portfolio.
+The root source is the editable project. `portfolio-source.zip` is an earlier scaffold backup. No API keys are required.
