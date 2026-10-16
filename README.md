@@ -1,3 +1,5 @@
+<img src="docs/banner.svg" alt="Interactive Portfolio — navigation and work sections" width="100%">
+
 # Interactive Portfolio
 ### Ayush Kumar Jha · React edition
 
